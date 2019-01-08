@@ -14,8 +14,10 @@
   "dependencies": {
     "@material-ui/core": "^3.8.1",
     "@material-ui/icons": "^3.0.1",
+    "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.0.76",
     "gatsby-plugin-netlify-cms": "^3.0.9",
+    "gatsby-plugin-styled-components": "^3.0.4",
     "netlify-cms": "^2.3.2",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
