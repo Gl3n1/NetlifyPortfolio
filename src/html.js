@@ -12,6 +12,7 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <title>JAM Spread Ninja</title>
           <link href="https://fonts.googleapis.com/css?family=Open+Sans|Sarabun:400,700" rel="stylesheet"></link>
           {this.props.headComponents}
         </head>
