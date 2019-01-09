@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import bannerImage from '../../static/img/bg2.jpeg';
 import me from '../../static/img/me.jpg';
+import Form from './components/Form';
 
 import {Container} from '../styles/global';
 
@@ -86,7 +87,7 @@ export default () => (
             <div>
               <h3>NodeJS</h3>
               <p>I want to be able to write my own backend code with the language im most familiar with and implement
-                server side rendering(NextJS) for faster page loads.
+                server side rendering(NextJS) for faster page loads on top of Gatsby SSR which is already implemented here.
               </p>
               <h3>GraphQL</h3>
               <p>No more innefficient RESTful API's!</p>
@@ -95,9 +96,16 @@ export default () => (
         </Container>
         </BackgroundBg>
       </section>
+      <section>
+        <FormBg>
+          <Container>
+            <h2>Contact me</h2>
+            <Form />
+          </Container>
+        </FormBg>
+      </section>
   </React.Fragment>
 )
-
 
 const Globals = createGlobalStyle`
   html {
@@ -216,4 +224,30 @@ const AboutMe = styled.div`
 
 const BackgroundBg = styled.div`
   background-color: #fff;
+`
+
+const FormBg = styled.div`
+  background-color: #b5c9fd;
+  
+  Form {
+    width: 500px;
+  }
+  
+  input, textarea, label {
+    ::placeholder {
+      font-size: 2rem;
+    }
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  button {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    Form {
+      width: 100%;
+    }
+  }
 `
