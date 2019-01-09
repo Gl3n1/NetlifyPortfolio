@@ -23,8 +23,7 @@
     "react-dom": "^16.5.1",
     "rebass": "^3.0.0-12",
     "styled-components": "^4.1.3",
-    "styled-normalize": "^8.0.4",
-    "styled-reset": "^1.6.4"
+    "styled-normalize": "^8.0.4"
   },
   "repository": {
     "type": "git",

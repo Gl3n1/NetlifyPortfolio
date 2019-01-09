@@ -1,5 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 8rem 10rem;
+  padding: 8rem 25rem;
+
+  @media(max-width: 1440px) {
+    padding: 8rem 13rem;
+  }
+
+  @media(max-width: 1024px) {
+    padding: 8rem 8rem;
+  }
+
+  @media(max-width: 768px) {
+    padding: 8rem 4rem;
+  }
 `
