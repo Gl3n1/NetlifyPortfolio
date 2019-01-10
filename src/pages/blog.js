@@ -1,4 +1,4 @@
-import React from "react";
+import React from "React";
 import Layouts from './components/Layouts';
 import {Container} from '../styles/global';
 

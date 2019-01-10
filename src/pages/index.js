@@ -1,4 +1,4 @@
-import React from "react";
+import React from "React";
 import styled from 'styled-components';
 import bannerImage from '../../static/img/bg2.jpg';
 import me from '../../static/img/me.jpg';
