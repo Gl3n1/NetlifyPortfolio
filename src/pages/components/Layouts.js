@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import AppBar from './AppBar';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { Normalize } from 'styled-normalize';
