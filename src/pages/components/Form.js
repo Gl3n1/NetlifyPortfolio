@@ -64,6 +64,7 @@ class Form extends React.Component {
       autoComplete="off" 
       name="contact" 
       method="POST"
+      action="/"
       validate="true"
       data-netlify="true" 
       data-netlify-honeypot="bot-field"
