@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 const FormInputs = styled.input`
   margin-bottom: 20px;
+  height: 30px;
   width: 400px;
 `
 
@@ -43,6 +44,8 @@ const Form = (props) => {
     <Button variant="contained" color="primary" className={classes.button} type="submit">
       Submit
     </Button>
+
+    <p>Or Alternatively, You can contact me at glenwan@gmail.com</p>
     </form>
   );
 }
