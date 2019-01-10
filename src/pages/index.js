@@ -1,17 +1,15 @@
 import React from "react";
-import { Normalize } from 'styled-normalize';
 import styled from 'styled-components';
-import { createGlobalStyle } from 'styled-components';
-import bannerImage from '../../static/img/bg2.jpeg';
+import bannerImage from '../../static/img/bg2.jpg';
 import me from '../../static/img/me.jpg';
 import Form from './components/Form';
+import Layouts from './components/Layouts';
 
 import {Container} from '../styles/global';
 
 export default () => (
   <React.Fragment>
-    <Normalize />
-    <Globals />
+    <Layouts>
       <section>
         <FrontBanner>
           <DarkOverlay>
@@ -104,40 +102,9 @@ export default () => (
           </Container>
         </FormBg>
       </section>
+    </Layouts> 
   </React.Fragment>
 )
-
-const Globals = createGlobalStyle`
-  html {
-    font-family: 'Sarabun', sans-serif;
-    line-height: 1.3;
-    max-width: 100vw;
-    font-size: 62.5%;
-  }
-
-  h1 {
-    font-size: 7rem;
-  }
-
-  h2 {
-    font-size: 4rem;
-  }
-
-  h3 {
-    font-size: 3rem;
-  }
-
-  p {
-    font-size: 2.5rem;
-  }
-
-  @media (max-width: 768px) {
-    html {
-      font-size: 40%;
-    }
-  }
-  
-`
 
 const FrontBanner = styled.div`
   background-image: url('${bannerImage}');
