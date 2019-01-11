@@ -53,6 +53,7 @@ const Globals = createGlobalStyle`
 
   p {
     font-size: 2.5rem;
+    font-family: 'Open Sans', sans-serif !important;
   }
 
   @media (max-width: 768px) {
