@@ -19,7 +19,6 @@ export default () => (
       }      
     `}
     render={data => {
-      console.log(data)
       return (
         <MyBackgroundImage>
           <Img fluid={data.file.childImageSharp.fluid} style={{position: "inherit"}} />
