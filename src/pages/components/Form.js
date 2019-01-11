@@ -8,11 +8,19 @@ const FormInputs = styled.input`
   margin-bottom: 20px;
   height: 30px;
   width: 400px;
+
+  @media(max-width: 768px) {
+    width: 100%;
+  }
 `
 
 const FormTextArea = styled.textarea`
   height: 100px;
   width: 400px;
+
+  @media(max-width: 768px) {
+    width: 100%;
+  }
 `
 
 const styles = theme => ({
