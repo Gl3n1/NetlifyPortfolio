@@ -29,13 +29,13 @@ const Form = (props) => {
   return (
     <React.Fragment>
       <form
-    autoComplete="off" 
-    name="contact" 
-    method="POST"
-    validate="true"
-    data-netlify="true" 
-    data-netlify-honeypot="bot-field"
-    action="/"
+      autoComplete="off" 
+      name="contact" 
+      method="POST"
+      validate="true"
+      data-netlify="true" 
+      data-netlify-honeypot="bot-field"
+      action="/"
     >
     <FormInputs type="hidden" name="form-name" value="contact" />
     <p hidden> <label htmlFor="bot-field">Don’t fill this out:{' '}<input name="bot-field" /> </label> </p>
