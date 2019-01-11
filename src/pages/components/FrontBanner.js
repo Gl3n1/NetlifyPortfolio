@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import bannerImage from '../../../static/img/bg2.jpg';
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image";
-
 
 export default () => (
   <StaticQuery 

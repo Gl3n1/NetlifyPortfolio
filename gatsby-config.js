@@ -37,6 +37,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `content`,
+        path: path.join(__dirname, `blog`),
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: path.join(__dirname, `static`, `img`),
       }
@@ -48,6 +55,7 @@ module.exports = {
         stripMetadata: true,
       },
     },
-    `gatsby-transformer-sharp`
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`
   ],
 }

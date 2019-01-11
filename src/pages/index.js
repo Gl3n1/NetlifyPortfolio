@@ -4,11 +4,19 @@ import me from '../../static/img/me.jpg';
 import Form from './components/Form';
 import Layouts from './components/Layouts';
 import FrontBannerr from './components/FrontBanner';
+import { Helmet } from "react-helmet";
 
 import {Container} from '../styles/global';
 
 export default () => (
   <React.Fragment>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>JAM Spread Ninja</title>
+      <meta name="description" content="Personal Portfolio of Glen Lexry Wan"/>
+      <meta name="author" content="Glen Lexry Wan" />
+      <link rel="canonical" href="https://www.jam-spread-ninja.com/" />
+    </Helmet>
     <Layouts>
       <section>
         <FrontBannerr />
@@ -69,6 +77,8 @@ export default () => (
               </p>
               <h3>VueJS</h3>
               <p>Recently picked up, can't wait to use this! a bit confusing after coming from React.</p>
+              <h3>GraphQL</h3>
+              <p>No more innefficient RESTful API's!</p>
             </div>
           </AboutMe>
           <AboutMe>
@@ -78,8 +88,6 @@ export default () => (
               <p>I want to be able to write my own backend code with the language im most familiar with and implement
                 server side rendering(NextJS) for faster page loads on top of Gatsby SSR which is already implemented here.
               </p>
-              <h3>GraphQL</h3>
-              <p>No more innefficient RESTful API's!</p>
             </div>
           </AboutMe>
         </Container>

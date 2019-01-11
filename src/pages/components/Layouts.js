@@ -51,6 +51,10 @@ const Globals = createGlobalStyle`
     font-size: 3rem;
   }
 
+  h4 {
+    font-size: 2rem;
+  }
+
   p {
     font-size: 2.5rem;
     font-family: 'Open Sans', sans-serif !important;
