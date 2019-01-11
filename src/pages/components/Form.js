@@ -39,11 +39,11 @@ const Form = (props) => {
     >
     <FormInputs type="hidden" name="form-name" value="contact" />
     <p hidden> <label htmlFor="bot-field">Don’t fill this out:{' '}<input name="bot-field" /> </label> </p>
-    <FormInputs name="name" placeholder="Your Name" type="text" />
+    <FormInputs name="name" placeholder="Your Name" type="text" required />
     <br></br>
-    <FormInputs name="email" placeholder="Your Email" type="email" />
+    <FormInputs name="email" placeholder="Your Email" type="email" required />
     <br></br>
-    <FormTextArea name="message" placeholder="Message" type="text"/>
+    <FormTextArea name="message" placeholder="Message" type="text"  required />
     <br></br>
     <Button variant="contained" color="primary" className={classes.button} type="submit">
       Submit
