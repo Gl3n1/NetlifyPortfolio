@@ -1,4 +1,7 @@
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://www.jam-spread-ninja.com/`,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-netlify-cms`
@@ -27,6 +30,7 @@ module.exports = {
         icon: `src/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`
   ],
 }
