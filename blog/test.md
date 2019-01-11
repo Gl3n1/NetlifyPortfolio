@@ -1,6 +1,6 @@
 ---
-path: Test
+path: Blog
 date: 2019-01-10T03:50:08.955Z
-title: Test
+title: First Release of Gatbsy Blog
 ---
-Now you’ll have to create a list of your markdown files on the front page. Like many blogs, you want to end up with a list of links on the front page pointing to each blog post. With GraphQL you can query for the current list of markdown blog posts so you won’t need to maintain the list manually.
+This is my first time ever setting up a headless CMS by myself and it doesn't take much much time as setting up a full CMS such as wordpress, which from my experience can take a very long and tedious setup.
