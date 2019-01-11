@@ -1,3 +1,5 @@
+const path = require(`path`);
+
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.jam-spread-ninja.com/`,
@@ -33,11 +35,19 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `static`, `img`),
+      }
+    },
+    {
       resolve: `gatsby-plugin-sharp`,
       options: {
         useMozJpeg: false,
         stripMetadata: true,
       },
     },
+    `gatsby-transformer-sharp`
   ],
 }

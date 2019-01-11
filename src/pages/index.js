@@ -1,9 +1,9 @@
 import React from "react";
 import styled from 'styled-components';
-import bannerImage from '../../static/img/bg2.jpg';
 import me from '../../static/img/me.jpg';
 import Form from './components/Form';
 import Layouts from './components/Layouts';
+import FrontBannerr from './components/FrontBanner';
 
 import {Container} from '../styles/global';
 
@@ -11,16 +11,7 @@ export default () => (
   <React.Fragment>
     <Layouts>
       <section>
-        <FrontBanner>
-          <DarkOverlay>
-            <Title>
-              JAM Spread Ninja
-            </Title>
-            <TitleDesc>
-              Personal portfolio of Glen Lexry Wan
-            </TitleDesc>
-          </DarkOverlay>
-        </FrontBanner>
+        <FrontBannerr />
       </section>
       <section>
         <BackgroundBg>
@@ -106,42 +97,6 @@ export default () => (
   </React.Fragment>
 )
 
-const FrontBanner = styled.div`
-  background-image: url('${bannerImage}');
-  background-position: center;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  text-align: center;
-
-  h1, h3 {
-    padding: 0 20px;
-    margin: 1rem;;
-  }
-`;
-
-const Title = styled.h1`
-  margin-bottom: 0rem;
-  font-weight: 700;
-  text-shadow: 3px 2px #c60000;
-`
-
-const TitleDesc = styled.h3`
-  font-family: 'Sarabun', sans-serif;
-  font-weight: 700;
-  text-align: center;
-`
-
-const DarkOverlay = styled.div`
-  background-color: rgba(0,0,0,0.6);
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
 const AboutMe = styled.div`
   display:grid;
   grid-template-columns: 1fr 2fr;
