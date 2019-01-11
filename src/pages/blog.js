@@ -15,11 +15,14 @@ export default ({data}) => {
         {
           blogData.edges.map((postNum, index)=>{
             const postDetails = postNum.node.frontmatter;
-            const content = postNum.node.excerpt;
+            const html = () => {
+              const htmlFromData = postNum.node.html
+              return {__html: htmlFromData}
+            } 
             return (
               <SinglePost key={index}>
                 <h3>{postDetails.title} <span> - {postDetails.date}</span></h3>
-                <p>{content}</p>
+                <div dangerouslySetInnerHTML={html()}/>
               </SinglePost>
             )
           })
