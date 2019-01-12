@@ -15,7 +15,7 @@ export default class HTML extends React.Component {
           <title>JAM Spread Ninja</title>
           {this.props.headComponents}
         </head>
-        <body {...this.props.bodyAttributes}>
+        <body {...this.props.bodyAttributes} >
           {this.props.preBodyComponents}
           <div
             key={`body`}

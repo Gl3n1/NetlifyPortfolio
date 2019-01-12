@@ -21,7 +21,8 @@ export default ({data}) => {
             } 
             return (
               <SinglePost key={index}>
-                <h3>{postDetails.title} <span> - {postDetails.date}</span></h3>
+                <h3>{postDetails.title}</h3>
+                <h4>{postDetails.date}</h4>
                 <div dangerouslySetInnerHTML={html()}/>
               </SinglePost>
             )
@@ -54,12 +55,22 @@ export const query = graphql`
 const SinglePost = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   align-items: end;
 
   span {
     font-size: 2rem;
     color: #676767;
+    font-weight: 400;
+  }
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    margin-top: 0;
+    color: #5b5b5b;
     font-weight: 400;
   }
 

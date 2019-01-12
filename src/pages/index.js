@@ -96,7 +96,6 @@ export default () => (
       <section>
         <FormBg>
           <Container>
-            <h2>Contact me</h2>
             <Form />
           </Container>
         </FormBg>
@@ -157,7 +156,7 @@ const BackgroundBg = styled.div`
 `
 
 const FormBg = styled.div`
-  background-color: #b5c9fd;
+  background-color: #000315;
   
   Form {
     width: 500px;

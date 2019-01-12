@@ -1,6 +1,6 @@
 ---
 path: Blog
-date: 2019-01-10T03:50:08.955Z
+date: 2019-01-12T03:50:08.955Z
 title: GatsbyJS is amazing!
 ---
 Hey! This will be my first blog I've written so please excuse if my grammar or english doesn't seem right. 

@@ -3,6 +3,7 @@ import AppBar from './AppBar';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { Normalize } from 'styled-normalize';
 import { createGlobalStyle } from 'styled-components';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 const theme = createMuiTheme({
   palette: {
@@ -26,7 +27,9 @@ const Layout = ({ children }) => {
       <Normalize />
       <Globals />
       <AppBar theme={theme} />
+      <Scrollbars style={{ width: "100vw", height: "100vh" }}>
       {children}
+      </Scrollbars>
     </MuiThemeProvider>
   )
 }

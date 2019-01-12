@@ -5,7 +5,6 @@ import { withStyles } from '@material-ui/core/styles';
 import styled from 'styled-components';
 
 const FormInputs = styled.input`
-  margin-bottom: 20px;
   height: 30px;
   width: 400px;
 
@@ -32,10 +31,24 @@ const styles = theme => ({
   },
 });
 
+const FormText = styled.p`
+  font-size: 2rem;
+  color: #fff;
+
+  span {
+    font-size: 1.6rem;
+  }
+`
+
+const FormTitle = styled.h2`
+  color: #fff;
+`
+
 const Form = (props) => {
   const { classes } = props;
   return (
     <React.Fragment>
+      <FormTitle>Contact me</FormTitle>
       <form
       autoComplete="off" 
       name="contact" 
@@ -47,17 +60,17 @@ const Form = (props) => {
     >
     <FormInputs type="hidden" name="form-name" value="contact" />
     <p hidden> <label htmlFor="bot-field">Don’t fill this out:{' '}<input name="bot-field" /> </label> </p>
-    <FormInputs name="name" placeholder="Your Name" type="text" required />
-    <br></br>
-    <FormInputs name="email" placeholder="Your Email" type="email" required />
-    <br></br>
-    <FormTextArea name="message" placeholder="Message" type="text"  required />
-    <br></br>
+    <FormText>Name:</FormText>
+    <FormInputs name="name" type="text" required />
+    <FormText>Email:</FormText>
+    <FormInputs name="email" type="email" required />
+    <FormText>Message:</FormText>
+    <FormTextArea name="message" type="text"  required />
     <Button variant="contained" color="primary" className={classes.button} type="submit">
       Submit
     </Button>
     </form>
-    <p>Or Alternatively, You can contact me at glenwan@gmail.com</p>
+    <FormText><span>Alternatively, You can contact me at glenwan@gmail.com</span></FormText>
     </React.Fragment>
   );
 }
