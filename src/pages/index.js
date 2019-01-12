@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import me from '../../static/img/me.jpg';
 import Form from './components/Form';
 import Layouts from './components/Layouts';
-import FrontBannerr from './components/FrontBanner';
+import FrontBanner from './components/FrontBanner';
 import { Helmet } from "react-helmet";
 
 import {Container} from '../styles/global';
@@ -19,7 +19,11 @@ export default () => (
     </Helmet>
     <Layouts>
       <section>
-        <FrontBannerr />
+        <FrontBanner 
+        // imagename="bg2.jpg" not working yet. something wrong with grapgql
+        imagesize="100vh" 
+        title="JAM Spread Ninja" 
+        description="Personal portfolio of Glen Lexry Wan" />
       </section>
       <section>
         <BackgroundBg>

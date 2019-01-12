@@ -2,15 +2,15 @@ import React from "react";
 import Layouts from './components/Layouts';
 import {Container} from '../styles/global';
 import styled from 'styled-components';
+import FrontBanner from './components/FrontBanner';
 
 export default ({data}) => {
   const blogData = data.allMarkdownRemark;
-  console.log(data)
   return (
   <Layouts>
     <section>
+      {/* <FrontBanner /> */}
       <Container>
-        <h1>The Jam Blog</h1>
         <h2>{blogData.totalCount} Posts</h2>
         {
           blogData.edges.map((postNum, index)=>{
@@ -76,5 +76,8 @@ const SinglePost = styled.div`
 
   p {
     grid-column: 1 / 3;
+  }
+  img {
+    width: 100%;
   }
 `

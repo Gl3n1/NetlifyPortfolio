@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image";
 
-export default () => (
+export default (props) => (
   <StaticQuery 
     query={graphql`
       query {
@@ -17,15 +17,16 @@ export default () => (
       }      
     `}
     render={data => {
+      const { title, description } = props
       return (
         <MyBackgroundImage>
           <Img fluid={data.file.childImageSharp.fluid} style={{position: "inherit"}} />
           <DarkOverlay>
             <Title>
-              JAM Spread Ninja
+              {title}
             </Title>
             <TitleDesc>
-              Personal portfolio of Glen Lexry Wan
+              {description}
             </TitleDesc>
           </DarkOverlay>
         </MyBackgroundImage>
@@ -35,8 +36,8 @@ export default () => (
 )
 
 const MyBackgroundImage = styled.div`
-  height: 100vh;
-  color: #fff;
+  height: ${props => props.imagesize};
+  color: #fff;  
   text-align: center;
 
   h1, h3 {
@@ -47,7 +48,6 @@ const MyBackgroundImage = styled.div`
   img {
     position: absolute;
     max-height:100vh;
-    
     object-fit: cover;
     object-position: center;
   }
