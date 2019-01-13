@@ -15,3 +15,9 @@ export const Container = styled.div`
     padding: 8rem 4rem;
   }
 `
+
+export const BlogContainer = styled.div`
+  padding: 8rem 0;
+  margin: auto;
+  max-width: 740px;
+`

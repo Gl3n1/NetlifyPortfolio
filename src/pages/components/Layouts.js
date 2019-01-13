@@ -4,6 +4,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { Normalize } from 'styled-normalize';
 import { createGlobalStyle } from 'styled-components';
 import { Scrollbars } from 'react-custom-scrollbars';
+import '../../styles/fonts.css';
 
 const theme = createMuiTheme({
   palette: {
@@ -20,8 +21,8 @@ const theme = createMuiTheme({
   }
 });
 
-const Layout = ({ children }) => {
-  console.log()
+const Layout = (props) => {
+  const { children } = props;
   return (
     <MuiThemeProvider theme={theme} >
       <Normalize />
@@ -36,7 +37,7 @@ const Layout = ({ children }) => {
 
 const Globals = createGlobalStyle`
   html {
-    font-family: 'Sarabun', sans-serif;
+    font-family: Sarabun, sans-serif;
     line-height: 1.3;
     max-width: 100vw;
     font-size: 62.5%;
@@ -47,11 +48,11 @@ const Globals = createGlobalStyle`
   }
 
   h2 {
-    font-size: 4rem;
+    font-size: 3.4rem;
   }
 
   h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   h4 {
@@ -59,7 +60,7 @@ const Globals = createGlobalStyle`
   }
 
   p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: 'Open Sans', sans-serif !important;
   }
 
