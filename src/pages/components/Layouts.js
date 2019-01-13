@@ -6,13 +6,13 @@ import { createGlobalStyle } from 'styled-components';
 import { Scrollbars } from 'react-custom-scrollbars';
 import '../../styles/fonts.css';
 
-const theme = createMuiTheme({
+export const theme = createMuiTheme({
   palette: {
     primary: {
-      main: 'rgba(233,30,99,0.8)'
+      main: 'rgba(61, 21, 95,0.7)'
     },
     secondary: {
-      main: '#e91e63',
+      main: '#df678c',
     }
   },
   typography: {
@@ -24,14 +24,14 @@ const theme = createMuiTheme({
 const Layout = (props) => {
   const { children } = props;
   return (
-    <MuiThemeProvider theme={theme} >
-      <Normalize />
-      <Globals />
-      <AppBar theme={theme} />
-      <Scrollbars style={{ width: "100vw", height: "100vh" }}>
-      {children}
-      </Scrollbars>
-    </MuiThemeProvider>
+    <Scrollbars style={{ width: "100vw", height: "100vh" }}>
+      <MuiThemeProvider theme={theme} >
+        <Normalize />
+        <Globals />
+        <AppBar theme={theme} />
+        {children}
+      </MuiThemeProvider>
+    </Scrollbars>
   )
 }
 

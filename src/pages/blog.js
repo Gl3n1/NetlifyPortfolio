@@ -9,7 +9,10 @@ export default ({data}) => {
   return (
   <Layouts>
     <section>
-      {/* <FrontBanner /> */}
+      <FrontBanner 
+        title="Jam with me" 
+        description="" 
+        imageheight="300px" />
       <BlogContainer>
         <h2>{blogData.totalCount} Posts</h2>
         {

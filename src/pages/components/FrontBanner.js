@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-export default (props) => (
+export default (props) => {
+  return (
   <StaticQuery 
     query={graphql`
       query {
@@ -19,9 +20,14 @@ export default (props) => (
     render={data => {
       const { title, description, imageheight } = props
       return (
-        <MyBackgroundImage imageheight={imageheight}>
-          <Img fluid={data.file.childImageSharp.fluid} style={{position: "inherit"}} />
-          <DarkOverlay>
+        <MyBackgroundImage imageheight={imageheight} >
+          <Img fluid={data.file.childImageSharp.fluid} style={{
+            position: "absolute", 
+            height: `${imageheight}`,
+            width: '100%',
+            top: 0
+            }} />
+          <DarkOverlay imageheight={imageheight} >
             <Title>
               {title}
             </Title>
@@ -33,7 +39,8 @@ export default (props) => (
       )
     }}
   />
-)
+  )
+}
 
 const MyBackgroundImage = styled.div`
   height: ${props => props.imageheight};
@@ -42,12 +49,13 @@ const MyBackgroundImage = styled.div`
 
   h1, h3 {
     padding: 0 20px;
-    margin: 1rem;;
+    margin: 1rem;
   }
 
   img {
     position: absolute;
     max-height:100vh;
+    max-width: 100vw;
     object-fit: cover;
     object-position: center;
   }
@@ -57,7 +65,7 @@ const DarkOverlay = styled.div`
   background-color: rgba(0,0,0,0.6);
   position: absolute;
   top: 0;
-  height: 100%;
+  height: ${props => props.imageheight};
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -68,7 +76,6 @@ const DarkOverlay = styled.div`
 const Title = styled.h1`
   margin-bottom: 0rem;
   font-weight: 700;
-  text-shadow: 3px 2px #c60000;
 `
 
 const TitleDesc = styled.h3`

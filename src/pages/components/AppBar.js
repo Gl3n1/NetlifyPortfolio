@@ -8,6 +8,9 @@ import Drawer from './Drawer';
 const styles = {
   root: {
     flexGrow: 1,
+    position: 'sticky',
+    top: 0,
+    zIndex: 100
   },
   grow: {
     flexGrow: 1,
@@ -22,7 +25,7 @@ function ButtonAppBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="fixed" color="primary">
+      <AppBar position="relative" color="primary">
         <Toolbar>
           <Drawer />
         </Toolbar>
