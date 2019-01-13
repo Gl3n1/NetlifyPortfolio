@@ -21,7 +21,7 @@ export default () => (
       <section>
         <FrontBanner 
         // imagename="bg2.jpg" not working yet. something wrong with grapgql
-        imagesize="100vh" 
+        imageheight="100vh" 
         title="JAM Spread Ninja" 
         description="Personal portfolio of Glen Lexry Wan" />
       </section>

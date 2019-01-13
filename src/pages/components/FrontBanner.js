@@ -17,9 +17,9 @@ export default (props) => (
       }      
     `}
     render={data => {
-      const { title, description } = props
+      const { title, description, imageheight } = props
       return (
-        <MyBackgroundImage>
+        <MyBackgroundImage imageheight={imageheight}>
           <Img fluid={data.file.childImageSharp.fluid} style={{position: "inherit"}} />
           <DarkOverlay>
             <Title>
@@ -36,7 +36,7 @@ export default (props) => (
 )
 
 const MyBackgroundImage = styled.div`
-  height: ${props => props.imagesize};
+  height: ${props => props.imageheight};
   color: #fff;  
   text-align: center;
 
