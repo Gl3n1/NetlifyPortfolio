@@ -71,8 +71,12 @@ class SwipeableTemporaryDrawer extends React.Component {
 
     return (
       <div>
-        <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-          <MenuIcon onClick={this.toggleDrawer('left', true)} />
+        <IconButton 
+          className={classes.menuButton} 
+          color="inherit" 
+          aria-label="Menu"
+          onClick={this.toggleDrawer('left', true)}>
+          <MenuIcon />
         </IconButton>
         <SwipeableDrawer
           open={this.state.left}

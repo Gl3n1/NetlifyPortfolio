@@ -76,6 +76,7 @@ const SinglePost = styled.div`
 
   p {
     grid-column: 1 / 3;
+    
   }
   img {
     width: 100%;
