@@ -24,7 +24,7 @@ export default () => (
         // nothing wrong with graphql, queries are run on build time not run time
         // so you you can't use react data
         // instead you have to pass arguments to queries when creating pages & layouts
-        imageheight="100vh" 
+        imageheight="85vh" 
         title="JAM Spread Ninja" 
         description="Personal portfolio of Glen Lexry Wan" />
       </section>
@@ -124,6 +124,10 @@ const AboutMe = styled.div`
 
   h3 {
     margin-bottom: 1rem;
+  }
+
+  h2, h3 {
+    color: rgb(61, 21, 95);
   }
 
   p {

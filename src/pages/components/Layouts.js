@@ -9,7 +9,7 @@ import '../../styles/fonts.css';
 export const theme = createMuiTheme({
   palette: {
     primary: {
-      main: 'rgba(61, 21, 95,0.7)'
+      main: 'rgba(61, 21, 95,0.95)'
     },
     secondary: {
       main: '#df678c',
@@ -49,6 +49,17 @@ const Globals = createGlobalStyle`
 
   h2 {
     font-size: 3.4rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 38px;
+      height: 3px;
+      background-color: #df678c;
+      position: absolute;
+      transform: translateY(5rem);
+      left: 0;
+    }
   }
 
   h3 {
@@ -67,6 +78,15 @@ const Globals = createGlobalStyle`
   @media (max-width: 768px) {
     html {
       font-size: 40%;
+    }
+
+    h2 {
+      &::after {
+        content: '';
+        left: 50%;
+        height: 2px;
+        transform: translate(-50%, 5rem);
+      }
     }
   }
   

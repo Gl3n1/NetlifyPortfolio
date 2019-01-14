@@ -13,6 +13,8 @@ export default ({data}) => {
         title="Jam with me" 
         description="" 
         imageheight="300px" />
+    </section>
+    <section>
       <BlogContainer>
         <h2>{blogData.totalCount} Posts</h2>
         {
