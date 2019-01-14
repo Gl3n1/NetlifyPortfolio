@@ -1,5 +1,5 @@
 ---
-path: blog
+path: ES6 arrow functions
 date: 2019-01-14T02:56:13.664Z
 title: ES6 arrow functions
 ---
