@@ -15,10 +15,10 @@ Arrow functions, are not the same as a normal function expression, **how**?
 2. Change the way "this" binds in functions.  "this" in arrow functions, change the context of "this", lexically binding it.
 3. We are able to omit the curly braces & the return statement due to implicit returns.
 
-## When do you not use Arrow Functions?
+**When do you not use Arrow Functions?**
 
 Object Methods because "this" is not bound to anything and will inherit the value of "this" from its parent scope.
 
-## When to use them?
+**When to use them?**
 
 Arrow functions work best when you need to bind "this" to bind to the context and not the function itself.
