@@ -12,7 +12,9 @@ So far, I'd like to put arrow functions out there, it has definitely has improve
 Arrow functions, are not the same as a normal function expression, **how**?
 
 1. They are anonymous, which means they are not named.
-2. Change the way "this" binds in functions.  "this" in arrow functions, change the context of "this", lexically binding it.
+
+2. Change the way "this" binds in functions. "this" in arrow functions, change the context of "this", lexically binding it.
+
 3. We are able to omit the curly braces & the return statement due to implicit returns.
 
 **When do you not use Arrow Functions?**
