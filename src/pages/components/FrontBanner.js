@@ -25,7 +25,6 @@ export default (props) => {
             position: "absolute", 
             height: `${imageheight}`,
             width: '100%',
-            // top: 0
             }} />
           <DarkOverlay imageheight={imageheight} >
             <Title>
@@ -64,7 +63,6 @@ const MyBackgroundImage = styled.div`
 const DarkOverlay = styled.div`
   background-color: rgba(0,0,0,0.6);
   position: absolute;
-  /* top: 0; */
   height: ${props => props.imageheight};
   width: 100%;
   display: flex;

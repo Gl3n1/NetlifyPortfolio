@@ -70,7 +70,7 @@ const Globals = createGlobalStyle`
     font-size: 2rem;
   }
 
-  p {
+  p, ol {
     font-size: 2rem;
     font-family: 'Open Sans', sans-serif !important;
   }

@@ -2,7 +2,9 @@ import React from "react";
 import Layouts from './components/Layouts';
 import { BlogContainer } from '../styles/global';
 import styled from 'styled-components';
+import { Link,graphql } from 'gatsby';
 import FrontBanner from './components/FrontBanner';
+import removeSpecialChar from '../utils/utility';
 
 export default ({data}) => {
   const blogData = data.allMarkdownRemark;
@@ -20,15 +22,12 @@ export default ({data}) => {
         {
           blogData.edges.map((postNum, index)=>{
             const postDetails = postNum.node.frontmatter;
-            const html = () => {
-              const htmlFromData = postNum.node.html
-              return {__html: htmlFromData}
-            } 
+            const pageLink = removeSpecialChar(postDetails.title.toLowerCase().split(' ').join('-'));
             return (
               <SinglePost key={index}>
-                <h3>{postDetails.title}</h3>
+                <Link to={`blog/${pageLink}`}><h3>{postDetails.title}</h3></Link>
                 <h4>{postDetails.date}</h4>
-                <div dangerouslySetInnerHTML={html()}/>
+                <p>{postNum.node.excerpt}</p>
               </SinglePost>
             )
           })
@@ -50,7 +49,6 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
           }
           excerpt
-          html
         }
       }
     }
