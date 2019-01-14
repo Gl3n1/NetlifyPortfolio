@@ -17,7 +17,7 @@ export const Container = styled.div`
 `
 
 export const BlogContainer = styled.div`
-  padding: 8rem 3rem 8rem 3rem;
+  padding: 0rem 3rem 8rem 3rem;
   margin: auto;
   max-width: 740px;
 `

@@ -3,6 +3,7 @@ import { Link,graphql } from 'gatsby';
 import Layout from '../pages/components/Layouts';
 import { BlogContainer } from '../styles/global';
 import styled from 'styled-components';
+import { Helmet } from "react-helmet";
 
 class BlogPostTemplate extends React.PureComponent {
   render() {
@@ -10,9 +11,13 @@ class BlogPostTemplate extends React.PureComponent {
     const { data } = this.props;
     const html = () => {
       return {__html: data.markdownRemark.html}
-    } 
+    }
     return (
       <Layout>
+        <Helmet>
+          <meta name="description" content={data.markdownRemark.excerpt}/>
+          <meta name="author" content="Glen Lexry Wan" />
+        </Helmet>
         <BlogContainer>
           <SinglePost>
             <h1>{data.markdownRemark.frontmatter.title}</h1>
