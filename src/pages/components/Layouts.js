@@ -24,7 +24,7 @@ export const theme = createMuiTheme({
 const Layout = (props) => {
   const { children } = props;
   return (
-    <Scrollbars style={{ width: "100vw", height: "100vh" }}>
+    <Scrollbars universal style={{ width: "100vw", height: "100vh" }}>
       <MuiThemeProvider theme={theme} >
         <Normalize />
         <Globals />
