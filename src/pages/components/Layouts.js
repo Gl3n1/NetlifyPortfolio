@@ -41,6 +41,8 @@ const Globals = createGlobalStyle`
     line-height: 1.3;
     max-width: 100vw;
     font-size: 62.5%;
+    overflow-x: hidden; /*for hiding horizontal scroll bar*/
+    overflow-y: auto; /*for vertical scroll bar*/
   }
 
   h1 {
