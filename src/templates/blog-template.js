@@ -13,20 +13,25 @@ class BlogPostTemplate extends React.PureComponent {
       return {__html: data.markdownRemark.html}
     }
     return (
-      <Layout>
+      <React.Fragment>
         <Helmet>
           <meta name="description" content={data.markdownRemark.excerpt}/>
           <meta name="author" content="Glen Lexry Wan" />
+          <meta property="og:title" content={data.markdownRemark.frontmatter.title} />
+          <meta property="og:description" content={data.markdownRemark.excerpt} />
+          <meta property="og:url" content="https://www.jam-spread-ninja.com" />
         </Helmet>
-        <BlogContainer>
-          <SinglePost>
-            <h1>{data.markdownRemark.frontmatter.title}</h1>
-            <h3>{data.markdownRemark.frontmatter.date}</h3>
-            <div dangerouslySetInnerHTML={html()} ></div>
-            <Link to="/blog" >Back</Link>
-          </SinglePost>
-        </BlogContainer>
-      </Layout>
+        <Layout>
+          <BlogContainer>
+            <SinglePost>
+              <h1>{data.markdownRemark.frontmatter.title}</h1>
+              <h3>{data.markdownRemark.frontmatter.date}</h3>
+              <div dangerouslySetInnerHTML={html()} ></div>
+              <Link to="/blog" >Back</Link>
+            </SinglePost>
+          </BlogContainer>
+        </Layout>
+      </React.Fragment>
     )
   }
 }
