@@ -129,6 +129,7 @@ const AboutMe = styled.div`
   h2, h3 {
     color: rgb(61, 21, 95);
   }
+  
 
   p {
     margin: 0;
@@ -150,6 +151,13 @@ const AboutMe = styled.div`
 
     h2 {
       margin: 0;
+      
+      &::after {
+        content: '';
+        left: 50%;
+        height: 2px;
+        transform: translate(-50%, 5rem);
+      }
     }
 
     img {

@@ -79,15 +79,6 @@ const Globals = createGlobalStyle`
     html {
       font-size: 40%;
     }
-
-    h2 {
-      &::after {
-        content: '';
-        left: 50%;
-        height: 2px;
-        transform: translate(-50%, 5rem);
-      }
-    }
   }
   
 `
