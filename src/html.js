@@ -12,6 +12,10 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <meta property="og:title" content="JAM Spread Ninja" />
+          <meta property="og:description" content="Personal Portfolio of Glen Lexry Wan" />
+          <meta property="og:image" content="" />
+          <meta property="og:url" content="https://www.jam-spread-ninja.com" />
           <title>JAM Spread Ninja</title>
           {this.props.headComponents}
         </head>
