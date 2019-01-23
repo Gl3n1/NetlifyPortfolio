@@ -8,6 +8,15 @@ import { Helmet } from "react-helmet";
 
 import {Container} from '../styles/global';
 
+import reactIcon from '../images/react-icon.png';
+import gulpIcon from '../images/gulp-icon.png';
+import scssIcon from '../images/scss-icon.svg';
+import gitIcon from '../images/git-icon.png';
+import gatsbyIcon from '../images/gatsby-icon.png';
+import vueIcon from '../images/vue-icon.png';
+import graphqlIcon from '../images/graphql-icon.png';
+import nodejsIcon from '../images/nodejs-icon.png';
+
 export default () => (
   <React.Fragment>
     <Helmet>
@@ -32,15 +41,21 @@ export default () => (
         <BackgroundBg>
         <Container>
           <AboutMe>
-          <img src={me} alt="Glen"></img>
+          <img src={me} alt="Glen" />
           <p>
             I work as a front end developer/software developer... Basically, i handle the User 
             Interface and handle your experince on the web and have been focusing on building web applications!
             Anyway, i'm Glen and i've been teaching myself how to code for over a year now and i love every part 
             of it including my morning cup of coffee!
           </p>
-          <h2>Skills</h2>
-          <div>
+          <HeadingWrapper>
+            <h2>Skills</h2>
+            <img src={reactIcon} />
+            <img src={scssIcon} />
+            <img src={gulpIcon} />
+            <img src={gitIcon} />
+          </HeadingWrapper>
+          <AboutMeSub>
             <h3>React/Redux</h3>
             <p>
               React was a tough library to get a familiar with, the syntax, jsx, seemed hard to get used to but after 
@@ -72,11 +87,16 @@ export default () => (
           <p>
             What is life without a version control system!
           </p>
-          </div>
+          </AboutMeSub>
           </AboutMe>
           <AboutMe>
-            <h2>Currently<br></br> learning</h2>
-            <div>
+            <HeadingWrapper>
+             <h2>Currently<br></br> learning</h2>
+             <img src={gatsbyIcon} />
+              <img src={vueIcon} />
+              <img src={graphqlIcon} />
+            </HeadingWrapper>
+            <AboutMeSub>
               <h3>GatsbyJS</h3>
               <p>I'm currently building this portofolio with GatsbyJS and i freaking love it! no need for server side code,
                 gatsby helps me ship code faster than ever, and with an integration with Netlify, i can push my updates with a 
@@ -86,16 +106,19 @@ export default () => (
               <p>Recently picked up, can't wait to use this! a bit confusing after coming from React.</p>
               <h3>GraphQL</h3>
               <p>No more innefficient RESTful API's!</p>
-            </div>
+            </AboutMeSub>
           </AboutMe>
           <AboutMe>
-            <h2>Picking up<br></br> Soon!</h2>
-            <div>
+            <HeadingWrapper>
+              <h2>Picking up<br></br> Soon!</h2>
+              <img src={nodejsIcon} />
+            </HeadingWrapper>
+            <AboutMeSub>
               <h3>NodeJS</h3>
               <p>I want to be able to write my own backend code with the language im most familiar with and implement
                 server side rendering(NextJS) for faster page loads on top of Gatsby SSR which is already implemented here.
               </p>
-            </div>
+            </AboutMeSub>
           </AboutMe>
         </Container>
         </BackgroundBg>
@@ -197,5 +220,20 @@ const FormBg = styled.div`
     Form {
       width: 100%;
     }
+  }
+`
+
+const AboutMeSub = styled.div`
+  display: grid;
+`
+
+const HeadingWrapper = styled.div`
+  h2 {
+    margin-bottom: 5rem;
+  }
+  img {
+    height: 60px;
+    object-fit: contain;
+    margin: 10px;
   }
 `
