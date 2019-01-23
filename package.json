@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "portfolio",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Portfolio built with Gatsby JS",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -30,6 +30,7 @@
     "gatsby-transformer-remark": "^2.2.0",
     "gatsby-transformer-sharp": "^2.1.10",
     "netlify-cms": "^2.3.2",
+    "prettier": "^1.16.0",
     "react": "^16.5.1",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.5.1",
@@ -44,5 +45,12 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.4"
   }
 }

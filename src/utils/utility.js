@@ -1,5 +1,3 @@
-const removeSpecialChar = (title) => {
-  return title.replace(/[`~!@#$%^&*()_|+\=?;:'",.<>\{\}\[\]\\\/]/gi, '');
-}
+const removeSpecialChar = title => title.replace(/[`~!@#$%^&*()_|+\=?;:'",.<>\{\}\[\]\\\/]/gi, '');
 
 export default removeSpecialChar;
