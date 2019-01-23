@@ -57,7 +57,7 @@ class SwipeableTemporaryDrawer extends React.Component {
         </List>
         <Divider />
         <List>
-          {['blog'].map((text, index) => (
+          {['blog','projects'].map((text, index) => (
             <Link to={text} key={text}>
               <ListItem button>
                 <FourKIcon className={classes.icon} />
