@@ -5,7 +5,7 @@ import vid1 from '../videos/vid-1.mp4';
 import image1 from '../videos/image1.png';
 import image2 from '../videos/image2.png';
 import vid2 from '../videos/vid-2.mp4';
-import superTodoAppImg from '../images/super-todo-app.png';
+import superTodoAppImg from '../images/supertodoapp.png';
 import styled from 'styled-components';
 
 import {Container} from '../styles/global';
@@ -50,7 +50,7 @@ export default () => {
           <p>Database: Firebase</p>
           <p>Link: <a href="https://super-todo-app.firebaseapp.com/" target="_blank">https://super-todo-app.firebaseapp.com/</a></p>
           <img src={superTodoAppImg}/>
-          <p>Super Todo App is a todo app but has firebase as a DB and hosting. This project was originally to keep track of my daily tasks but i have decided to host it publicly. For the upcoming release I plan to add a login feature which requires the user to be authenticated and the ID will retrieve the corresponding data that was originally inserted. Also, I will be implementing local storage which allows the user save the list without having to be authenticated. Hence the user can still use the app without having to be authenticated.
+          <p>"Super Todo App" is a todo app but has firebase as a DB and hosting. This project was originally to keep track of my daily tasks but i have decided to host it publicly. For the upcoming release I plan to add a login feature which requires the user to be authenticated and the ID will retrieve the corresponding data that was originally inserted. Also, I will be implementing local storage which allows the user save the list without having to be authenticated. Hence the user can still use the app without having to be authenticated.
           </p>
         </Container>
       </section>
