@@ -5,7 +5,7 @@ import vid1 from '../videos/vid-1.mp4';
 import image1 from '../videos/image1.png';
 import image2 from '../videos/image2.png';
 import vid2 from '../videos/vid-2.mp4';
-import shoppingCart from '../images/shoppingcart.png';
+import shoppingCart from '../images/shoppingcartproject.png';
 import superTodoAppImg from '../images/supertodoapp.png';
 import styled from 'styled-components';
 
